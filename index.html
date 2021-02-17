@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+	<img class="wrapper__background" src="img/background.png">
+	<div id="displayMenu" class="">
+  	<header class='header'>
+		<h1 class="header__title">Выберите уровень сложности:</h1>
+		<p class="header__subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+	</header>
+	<section class="menu">
+		<div class="menu__start">
+			<ul class="start__levels">
+			<li class="start__levels__easy" id="easyLevel">
+				<div id="easyCheck" class="menu__start__rhomb"></div>Простой</li>
+			<li class="start__levels__normal" id="normalLevel">
+				<div id="normalCheck" class="menu__start__rhomb"></div>Средний</li>
+			<li class="start__levels__hard" id="hardLevel">
+				<div id="hardCheck" class="menu__start__rhomb"></div>Сложный</li>
+		</ul>
+		<button type="button" class="start__button" id="button">Начать игру</button>
+		</div>
+		<div class="menu__cards">
+			<img src="img/card.png" class="menu__cards__first">
+			<img src="img/card2.png" class="menu__cards__second">
+		</div>
+	</section> 
+	</div>
+</div>
+	<!--section class="game">
+		<div class="game__cards" id="gameCards"></div>
+	</section-->
+  
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
