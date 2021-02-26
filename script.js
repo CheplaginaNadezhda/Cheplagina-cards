@@ -4,7 +4,7 @@ let quantityCards = 3;
 let level = document.querySelector('.start__level').getAttribute('id');
 let randomI = 0;
 let arr = [];
-let goToMenu = false;
+let gameOver = false;
 
 document.querySelectorAll('li.start__level').forEach(e => {
 	e.addEventListener('click', levelClick)
@@ -39,17 +39,23 @@ document.querySelectorAll('li.start__level').forEach(e => {
 		} else{
 			newCard.classList.remove('game__hard__card')
 		}
-	newCard.addEventListener('click', rotateCard) 
+	//newCard.addEventListener('click', rotateCard) 
+	newCard.addEventListener('click', rotateCard)
 	};
-	
+
  function rotateCard(e) {
- 	goToMenu ? window.location.reload() : ''
-	if(e.target === arr[randomI]){
+ 	e.preventDefault();
+    if(!gameOver){
+      if(e.target === arr[randomI]){
 		arr[randomI].classList.add('rotate__bag__card');
 		} else {
 			e.target.classList.add('rotate__card')
-	}
-		goToMenu = true;
+		}
+    }
+    else {
+      window.location.reload();
+    }
+	gameOver = true;  	
 }
 
 	function buttonClick() {
@@ -72,3 +78,9 @@ document.querySelectorAll('li.start__level').forEach(e => {
 		}
 	arr = document.querySelectorAll('.game__card');
 }
+
+/*function goToMenu() {
+	window.location.reload()
+	//document.querySelector('.game').classList.add('displayNone');
+	//displayMenu.classList.remove('displayNone');
+}*/
