@@ -27,7 +27,6 @@ document.querySelectorAll('li.start__level').forEach(e => {
  	document.getElementById('normalLevel').classList.remove('selected', 'red');
  	document.getElementById('hardLevel').classList.remove('selected', 'red');
  	e.target.classList.add('selected','red');
- 	button.addEventListener('click', buttonClick) 
  }
 
  function createCard() {
@@ -39,7 +38,6 @@ document.querySelectorAll('li.start__level').forEach(e => {
 		} else{
 			newCard.classList.remove('game__hard__card')
 		}
-	//newCard.addEventListener('click', rotateCard) 
 	newCard.addEventListener('click', rotateCard)
 	};
 
@@ -58,7 +56,7 @@ document.querySelectorAll('li.start__level').forEach(e => {
 	gameOver = true;  	
 }
 
-	function buttonClick() {
+		button.onclick = () => {
 	displayMenu.classList.add('displayNone');
 	let section = document.createElement('section');
 	section.className = 'game';
@@ -78,9 +76,3 @@ document.querySelectorAll('li.start__level').forEach(e => {
 		}
 	arr = document.querySelectorAll('.game__card');
 }
-
-/*function goToMenu() {
-	window.location.reload()
-	//document.querySelector('.game').classList.add('displayNone');
-	//displayMenu.classList.remove('displayNone');
-}*/
