@@ -85,8 +85,10 @@ body{
 		transition: box-shadow .4s;
 	}
 
-	.start__button:hover{
+	.start__button:hover,
+	.start__button:focus{
 		box-shadow: 4px 7px 13px -2px #000;
+		outline: none;
 	}
 
 	.menu__cards{
@@ -111,7 +113,7 @@ body{
 		display: flex;
 		flex-wrap: wrap;
 		margin: auto;
-		margin-top: 2%;
+		margin-top: 5%;
 	}
 
 	.game__hard{
@@ -120,14 +122,16 @@ body{
 		display: flex;
 		flex-wrap: wrap;
 		margin: auto;
-		margin-top: 2%;
+		margin-top: 4%;
 	}
 	.game__card{
 		margin: auto;
 		margin-bottom: 3%;
 		width: 218px;
-		height: 341px;
+		height: 339px;
+		border-radius: 3%;
 		background: url(img/card1.png) no-repeat;
+		background-size: contain;
 		filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
 	}
 	.game__card:hover{
@@ -163,6 +167,49 @@ body{
 	.displayNone{
 		display: none;
 	}
+	@media (max-width: 1335px){
+		.game{
+			width: 53%;
+		}
+		.game__hard{
+			width: 74%;
+		}
+
+		.game__card{
+			margin-bottom: 5%;
+		}
+
+	}
+
+	@media (max-width: 1202px){
+		.game{
+			width: 59%;
+		}
+		.game__hard{
+			width: 88%;
+		}
+	}
+
+	@media (max-width: 1090px){
+		.game{
+			width: 65%;
+		}
+		.game__hard{
+			width: 90%;
+		}
+	}
+
+	@media (max-width: 988px) {
+		.game__hard{
+			width: 97%;
+		}
+	}
+	@media (max-width: 917px) {
+		.game__hard__card{
+			width: 145px;
+			height: 224px;
+		}
+	}
 
 	@media (max-width: 880px) {
 		.header__title,
@@ -189,17 +236,69 @@ body{
 	 	.start__levels{
 	 		margin-bottom: 55px;
 	 	}
-	
+
+	 	.game{
+			width: 80%;
+		}
+
+		.game__hard{
+			width: 98%;
+		}
 	}
-	@media (max-width: 375px) {
+
+	@media (max-width: 667px) {
+		.game__card {
+			width: 128px;
+			height: 200px;
+			margin-bottom: 7%;
+		} 
+		.game__hard__card {
+			width: 108px;
+			height: 169px;
+		}
+
+		.game{
+			width: 76%;
+		}
+		.game__hard{
+			width: 96%;
+		}
+	}
+	
+	@media (max-width: 540px) {
+		.game{
+			margin-top: 7%;
+		}
+		.header {
+			margin-bottom: 7%;
+		}
+	}
+	@media (max-width: 505px) {
+		.game {
+			width: 96%;
+		}
+	}
+
+	@media (max-width: 399px) {
+		.game__card,
+		.game__hard__card {
+			width: 108px;
+			height: 169px;
+			margin-bottom: 9%;
+		}
+		.start__button {
+			padding: 28px 55px;
+		}
+
 		.header__title,
-		.start__levels__easy,
-   		.start__levels__normal,
-   		.start__levels__hard{
+		.start__level
+   		{
 	 		font-size: 35px;
 	 		line-height: 37px;
 	 	}
-
+	 	.header__title {
+	 		margin-top: 2%;
+	 	}
 	 	.header__subtitle{
 	 		font-size: 12px;
 	 		width: 90%;
@@ -223,6 +322,13 @@ body{
 	 	.menu__start__rhomb{
 	 		top: 6px;
 	 	}
-	
 	}
 
+	@media (max-width: 336px) {
+		.game {
+			width: 95%;
+			margin-top: 9%;
+		}
+	}
+
+	

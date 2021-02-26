@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Найди баг!</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper">
-	<img class="wrapper__background" src="img/background.png">
+	<img class="wrapper__background" src="img/background.png" alt="background-image">
 	<div id="displayMenu" class="">
   	<header class='header'>
 		<h1 class="header__title">Выберите уровень сложности:</h1>
 		<p class="header__subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
 	</header>
-	<section class="menu">
+	<div class="menu">
 		<div class="menu__start">
 			<ul class="start__levels">
 			<li class="start__level easy selected" id="easyLevel" data-value = "3">Простой</li>
@@ -26,16 +26,12 @@
 		<button type="button" class="start__button" id="button">Начать игру</button>
 		</div>
 		<div class="menu__cards">
-			<img src="img/card.png" class="menu__cards__first">
-			<img src="img/card2.png" class="menu__cards__second">
+			<img src="img/card.png" class="menu__cards__first" alt="card">
+			<img src="img/card2.png" class="menu__cards__second" alt="card">
 		</div>
-	</section> 
+	</div> 
 	</div>
-</div>
-	<!--section class="game">
-		<div class="game__cards" id="gameCards"></div>
-	</section-->
-  
-  <script type="text/javascript" src="script.js"></script>
+</div>  
+  <script src="script.js"></script>
 </body>
 </html>
