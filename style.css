@@ -4,12 +4,13 @@
 }
 body{
 	width: 100%;
+	max-width: 1440px;
 	height: auto;
 	color: #fff;
 }
  .wrapper{
  	height: auto;
- 	padding: 9% 0 0 7%;
+ 	padding: 2% 0 0 5%;
  }
  .wrapper__background{
  	position: fixed;
@@ -31,48 +32,47 @@ body{
 
  .menu{
 	display: flex;
-	padding-bottom: 23%;
 }
 .menu__start{
 	width: 50%;
 }
 
 	.start__levels{
-		margin-bottom: 112px;
+		margin-bottom: 4%;
 		padding-left: 49px;
 	}
 
-   .start__levels__easy,
-   .start__levels__normal,
-   .start__levels__hard{
-   	position: relative;
- 	font: 700 50px/59px Roboto, helvetica, arial, sans-serif;
-	margin-bottom: 24px;
- 	list-style: none;
- 	cursor: pointer;
- 	transition: color .2s;
+   .start__level{
+	   	position: relative;
+	 	font: 700 50px/59px Roboto, helvetica, arial, sans-serif;
+		margin-bottom: 24px;
+	 	list-style: none;
+	 	cursor: pointer;
+	 	transition: color .2s;
 	}
+	
+	.start__level::before {
+		background: transparent;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		content: "";
+		transform: rotate(45deg);
+		top: 18px;
+		left: -43px;
+	}
+		.selected::before{
+   		background:#d62b2e;
+   	}	
 
-	.menu__start__rhomb{
-	background: #d62b2e;
-	height: 20px;
-	width: 20px;
-	position: absolute;
-	content: "";
-	transform: rotate(45deg);
-	top: 18px;
-	left: -43px;
-}
-/*
-	.start__levels__easy:hover,
-   .start__levels__normal:hover,
-   .start__levels__hard:hover{
-   	color:#d62b2e;
-   }
-   */
-   	.selected{
+   	.red{
    		color:#d62b2e;
    	}
+
+	.start__level:hover{
+   	color:#d62b2e;
+   }
+      	
 	.start__button{
 		cursor: pointer;
 		color: #fff;
@@ -94,7 +94,7 @@ body{
 		position: relative;
 		display: flex;
 		flex-wrap: nowrap;
-		padding-top: 17%;
+		padding-top: 5%;
 	}
 
 	.menu__cards__first{
@@ -106,26 +106,60 @@ body{
 		right: 9%;
 	}
 	.game{
-		width: 100%;
+		width: 49%;
 		height:100%;
-		display: inline-block;
-	}
-	.game__cards{
-	/*position: absolute;*/
-	width: 218px;
-	height: 341px;
-	margin: auto;
-	/*left: 369px;
-	top: 341px;*/
-	background: url(img/card1.png);
-	filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto;
+		margin-top: 2%;
 	}
 
-	.game__cards:hover {
+	.game__hard{
+		width: 74%;
+		height:100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto;
+		margin-top: 2%;
+	}
+	.game__card{
+		margin: auto;
+		margin-bottom: 3%;
+		width: 218px;
+		height: 341px;
+		background: url(img/card1.png) no-repeat;
+		filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+	}
+	.game__card:hover{
 	  box-shadow: 15px 15px 15px rgba(0,0,0,0.5);
-	  transform: translateY(-30px) rotateZ(-2deg);;
+	  transform: translateY(-30px) rotateZ(-2deg);
+	  transform-style: preserve-3d;
 	}
 
+	.game__hard__card {
+		background-size: contain;
+		width: 178px;
+		height: 276px;
+		border-radius: 7px;
+	}
+
+	.game__hard__card:hover {
+	  box-shadow: 15px 15px 15px rgba(0,0,0,0.5);
+	  transform: translateY(-30px) rotateZ(-2deg);
+	  transform-style: preserve-3d;
+	}
+	.rotate__card{
+		background: url(img/end.png) no-repeat;
+		background-size: contain;
+		transform: none;
+		border-radius: 5%;
+	}
+	.rotate__bag__card{
+		background: url(img/bag.png) no-repeat;
+		background-size: contain;
+		transform: none;
+		border-radius: 5%;
+	}
 	.displayNone{
 		display: none;
 	}
